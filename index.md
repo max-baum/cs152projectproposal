@@ -1,5 +1,4 @@
 # PPP Loan Fraud Detection
-### By: Max Baum
 
 ## Topline
 
