@@ -47,7 +47,7 @@ Ultimately, we hope to develop a model that performs efficaciously on our datase
 How could we minimize bias in our data and model?
   * This is a very complicated question given the nature of the data. One of the issues here is the lack of "real" negatives in the dataset, so maybe a clustering tecnique could be used here. We think there are quite a few procedural questions to discuss as we handle the data and develop the model. We cannot fix the SBA and the Department of Justice.
     
-How should we “audit” our code and data?
+* How should we “audit” our code and data?
   * The data can be spot-checked, or further if we have time, all 248 cases of fraud can be reviewed manually (though this may not be necessary). All code should be reviewed by multiple parties.
 
 **Impact Questions:**
