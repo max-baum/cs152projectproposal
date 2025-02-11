@@ -45,6 +45,7 @@ How should we “audit” our code and data?
   * The data can be spot-checked, or further if we have time, all 248 cases of fraud can be reviewed manually (though this may not be necessary). All code should be reviewed by multiple parties.
 
 **Impact Questions:**
+
 Do we expect different errors rates for different sub-groups in the data?
   * There is no reason to suspect we would, but we simply don't know. It is further unclear what a "sub-group" would constitute here, as we have limited information identifying characteristics of businesses, rather information about the loans.
 What are likely misinterpretations of the results and what can be done to prevent those misinterpretations?
