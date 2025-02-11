@@ -12,7 +12,9 @@ In our CS152 project, we want to explore PPP loan praud, and gauage the proficie
 
 ## Outline
 
-The U.S. Federal Government dispersed nearly $700 billion in paycheck-protection program stimulus in 2020, to counteract the economic downturn caused by the COVID crisis. It is estimated that roughly 10% of the loans were potentially issued to fradulent recipients, accounting for roughly $64b. 
+The U.S. Federal Government Paycheck Protection Program (PPP) bolstered the U.S. economy and protected jobs through the lockdowns induced by COVID-19, but the program was also riddled with fraud.
+
+With a 
 
 Roughly $30b of potentially fradulent PPP loans remains outstanding. 
 
