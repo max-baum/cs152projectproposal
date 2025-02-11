@@ -42,9 +42,9 @@ Ultimately, we hope to develop a model that performs efficaciously on our datase
   * Yes, with known and communicated limitations.
  
 * What bias could be in our data? (All data contains bias.)
-  * Many. We think the most likely source of bias is causes simply by the low throughput of the Justice system, and that not all loans have been investigated equally for fraud. There could also be bias caused by Max, caused by errors in the processing and devlopment of this dataset.
+  * It depends. We think the most likely source of bias is causes simply by the low throughput of the Justice system, and that not all loans have been investigated equally for fraud. There could also be bias caused by Max, caused by errors in the processing and devlopment of this dataset.
  
-How could we minimize bias in our data and model?
+* How could we minimize bias in our data and model?
   * This is a very complicated question given the nature of the data. One of the issues here is the lack of "real" negatives in the dataset, so maybe a clustering tecnique could be used here. We think there are quite a few procedural questions to discuss as we handle the data and develop the model. We cannot fix the SBA and the Department of Justice.
     
 * How should we “audit” our code and data?
