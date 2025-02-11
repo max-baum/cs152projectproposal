@@ -46,11 +46,11 @@ How should we “audit” our code and data?
 
 **Impact Questions:**
 
-Do we expect different errors rates for different sub-groups in the data?
+* Do we expect different errors rates for different sub-groups in the data?
   * There is no reason to suspect we would, but we simply don't know. It is further unclear what a "sub-group" would constitute here, as we have limited information identifying characteristics of businesses, rather information about the loans.
-What are likely misinterpretations of the results and what can be done to prevent those misinterpretations?
+* What are likely misinterpretations of the results and what can be done to prevent those misinterpretations?
   * First and foremost, this is a retroactive assessment, and it can be directly applied toward proactive loan fraud prevention going forward.
   * Secondly, even if this model could be used proactively, a postive indication of fraud is not the confirmation of fraud. The only thing that can confirm fraud is the Justice system. At most, this model could be used in the triaging of case work.
   * Misinterpretations should be prevented with clear communication of the models known capabilities and limitations, as clarified above and as will be further discussed among the team.
-How might we impinge individuals’ privacy and/or anonymity?
+* How might we impinge individuals’ privacy and/or anonymity?
   * All information used here is publically available. Given the nature of the dataset and analysis, there is little risk that this project will impede upon privacy rights of individuals.
