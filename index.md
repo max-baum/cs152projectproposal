@@ -1,5 +1,11 @@
 # PPP Loan Fraud Detection
 
+## Team members:
+* Viren Jain
+* Cameron Hatler
+* Arsh Chhabra
+* Max Baum
+
 ## Topline
 
 In our CS152 project, I want to explore PPP Loan Fraud, and gauage the proficiency of a neural network in predicting PPP Loan Fraud. As a note, this project will build upon work that Max's team did in a computational statistics class.
