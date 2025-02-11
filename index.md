@@ -14,10 +14,12 @@ In our CS152 project, we want to explore PPP loan praud, and gauage the proficie
 
 The U.S. Federal Government Paycheck Protection Program (PPP) bolstered the U.S. economy and protected jobs through the lockdowns induced by COVID-19, but the program was also riddled with fraud.
 
-With a 
+Digital systems, including neural-network based systems, are increasingly utilized to prevent financial fraud.
 
-Roughly $30b of potentially fradulent PPP loans remains outstanding. 
+This project will employ a custom-built dataset to test the efficacy of a neural-network model in detecting PPP fraud.
 
-There is no singular public source of truth on PPP loan fraud, nor is there a single dataset that matches PPP loans to their identifying characteristics. Through a FOIA request, the SBA released a dataset of all PPP loans issues and corresponding attributes, but no indication of whether a loan was tied to fraud. In parallel, a law firm by the name of Arnold & Porter kept a tracker of fraud cases brought forth by the DOJ. Through a elaborate multistep process demanded by the disparate nature of the two datasets, Wonny, Earn and I "bridged" the two datasets last semester such that we could annotated the SBA dataset by whether or not a loan was confirmed to be fraudulent.
+We expect there to be a range of challenges in the execution of this project.
+
+Ultimately, we hope to develop a model that performs efficaciously on our dataset. We further hope that this model could one day help inform the investigation of PPP fraud and/or the development of IT systems that proactively gaurd against fraud in U.S. loan programs.
 
 ## Ethical sweep
