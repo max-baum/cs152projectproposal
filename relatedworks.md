@@ -13,7 +13,7 @@ The paper focuses on detecting fraudulent consumer loans using Graph Neural Netw
 https://visionx.io/blog/fraud-detection-machine-learning/
 THis blog post provides a survey of the various tools used for fraud detection and the various Machine Learning Algorithms being used today for that purpose. It covers techniques such as Graph neural networks, reinforcement learning, and adverserial learning which seem particularly useful to us as we work on a basis for the neural network we wish to design for this data. This will enable us to gain some experience in the prelimary steps and generate ideas for how we wish to structure our neural netowrk.
 
-##Blog Post- "Optimizing Fraud Detection in Financial Services with Graph Neural Networks and NVIDIA GPUs"
+## Blog Post- "Optimizing Fraud Detection in Financial Services with Graph Neural Networks and NVIDIA GPUs"
 https://developer.nvidia.com/blog/optimizing-fraud-detection-in-financial-services-with-graph-neural-networks-and-nvidia-gpus/
 This blog post focuses particulary on how Graph neural networks leverage the structure of interconnectedness in the data points and talks about ETL, sampling, and training of neural netowrks. It is particularly focused on how NVIDIA GPUs may be particulalry efficient for the purposes of leveraging GNNs to optimize training but it provides us with good ideas and a solid fundamental basis on how GNNs may be used to detect fraud and extend to our data set which is a relatively different problem but still quite similar.
 
