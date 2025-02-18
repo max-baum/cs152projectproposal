@@ -1,4 +1,4 @@
-#Related Works
+# Related Works
 
 ## "A loan application fraud detection method based on knowledge graph and neural network"
 This research article looked at the application of neural networks and knowledge graphs to spot fraud of a loan applicant based on their cell phone history. Their reasoning is that it is difficult to fake call history, and fraudsters could be in a shared network or participate in similar habits of calling many banks to apply for many loans. Our project focuses on the information provided by the loan application and doesn't use any additional information such as phone history. We also don't would likely just be using a neural network without the inclusion of a knowledge graph or Word2Vec like in this article. 
