@@ -1,9 +1,5 @@
 # Paycheck Protection Plan (PPP) Loan Fraud Detection
 
-Introduction
-Introductory sentence
-Supporting paragraphs (e.g., citation or quote)
-Thesis
 The goal of this project is to train a neural network on a dataset which contains confirmed fraud of the Paycheck Protection Plan (PPP) loans. These loans were given out during the pandemic to help small businesses, however there have been many cases found of individuals applying and recieving these loans only to use them for personal expenses rather than business ones. The dataset we are working with contains confirmed cases of fraud, however there are no confirmed non-fraudulent cases (a case could have been fraudlent but never been found out). This presents a unique problem, but we believe it is a problem which may be solved with anomaly detection. This, along with other methods, will enable us to create a robust model for fraud detection of PPP loans. 
 
 First body section - **Max will take**
