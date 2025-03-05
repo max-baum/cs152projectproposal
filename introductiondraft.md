@@ -1,9 +1,10 @@
-Title
+# Paycheck Protection Plan (PPP) Loan Fraud Detection
 
 Introduction
 Introductory sentence
 Supporting paragraphs (e.g., citation or quote)
 Thesis
+The goal of this project is to train a neural network on a dataset which contains confirmed fraud of the Paycheck Protection Plan (PPP) loans. These loans were given out during the pandemic to help small businesses, however there have been many cases found of individuals applying and recieving these loans only to use them for personal expenses rather than business ones. The dataset we are working with contains confirmed cases of fraud, however there are no confirmed non-fraudulent cases (a case could have been fraudlent but never been found out). This presents a unique problem, but we believe it is a problem which may be solved with anomaly detection. This, along with other methods, will enable us to create a robust model for fraud detection of PPP loans. 
 
 First body section - **Max will take**
 Topic related to first point of thesis
@@ -21,6 +22,5 @@ Third body section -- **Someone talk about findings from two other papers**
 Topic related to third point of thesis
 Supporting paragraphs
 Conclusion -- **Someone talk about overarching goals**
-Restated thesis
-Highlighted points
-Future work and additional questions
+
+By leveraging the flexibility of neural networks, we hope to find patterns in fraudulent applications of PPP loans in order to track down other suspicious borrowers. While our dataset can't be seperated into true positive and negative cases of fraud, we have some true positive cases and many undetermined cases. By using anomaly detection, the model should give improved predictions of true positive and negative cases which will allow for easier application of the model. We will also aim to incorporate what various models have succesfully done for different cases of fraud detection into our model. This work will help in fraud detection of PPP loans, saving money if it were incorporated, and will show how effective the combination of various neural network methods in this unique situation can be. 
