@@ -1,10 +1,7 @@
 # Paycheck Protection Plan (PPP) Loan Fraud Detection
 
 ## Team Members
-Arsh
-Cameron
-Max
-Viren
+Arsh, Cameron, Max, Viren
 
 ## Abstract
 
