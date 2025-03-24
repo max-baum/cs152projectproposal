@@ -38,12 +38,19 @@ By leveraging the flexibility of neural networks, we hope to find patterns in fr
 ## Remaining Sections
 
 * Methods
-  _Purpose of Section:_ In this section, we will overview the approaches we took to complete our project
+
+   _Purpose of Section:_ In this section, we will overview the approaches we took to complete our project
+
 * Results
+
   _Purpose of Section:_ In this section, we will detail the results acheived following our methodology
+
 * Discussion
+
   _Purpose of Section:_ In this section, we will analyze the meaning and significance of our results, and what the indicate for both the field of neural networks and for fraud detection.
+
 * Reflection and Looking Forward
+
   _Purpose of Section:_ In this section, we will reflect more broadly upon what has been achieved, and what additional work can be done to build compentent systems at the intersection of neural networks and fruad detection.
 
 ## Citations
