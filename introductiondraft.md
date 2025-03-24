@@ -35,6 +35,17 @@ We face a problem in our dataset of having very few data points being for confir
 
 By leveraging the flexibility of neural networks, we hope to find patterns in fraudulent applications of PPP loans in order to track down other suspicious borrowers. While our dataset can't be seperated into true positive and negative cases of fraud, we have some true positive cases and many undetermined cases. By using anomaly detection, the model should give improved predictions of true positive and negative cases which will allow for easier application of the model. We will also aim to incorporate what various models have succesfully done for different cases of fraud detection into our model. This work will help in fraud detection of PPP loans, saving money if it were incorporated, and will show how effective the combination of various neural network methods in this unique situation can be. 
 
+## Remaining Sections
+
+* Methods
+  _Purpose of Section:_ In this section, we will overview the approaches we took to complete our project
+* Results
+  _Purpose of Section:_ In this section, we will detail the results acheived following our methodology
+* Discussion
+  _Purpose of Section:_ In this section, we will analyze the meaning and significance of our results, and what the indicate for both the field of neural networks and for fraud detection.
+* Reflection and Looking Forward
+  _Purpose of Section:_ In this section, we will reflect more broadly upon what has been achieved, and what additional work can be done to build compentent systems at the intersection of neural networks and fruad detection.
+
 ## Citations
 [^1]: https://www.kaggle.com/datasets/danb91/covid-ppp-loan-data-with-fraud-examples?select=ppp_fraud_cases.csv
 [^2]: https://dl.acm.org/doi/10.1145/3194206.3194208
