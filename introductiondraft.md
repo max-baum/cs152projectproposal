@@ -40,26 +40,35 @@ By leveraging the flexibility of neural networks, we hope to find patterns in fr
 * Methods
 
    _Purpose of Section:_ In this section, we will overview the approaches we took to complete our project
+  
    _Topic Sentence:_ We designed and followed a methodology to address core deficiencies in our dataset, specifically including class imbalance and the lack of true negatives.
+  
    _Subsection 1_: A simple neural network approach
+  
    _Subsection 2_: Utilizing a bespoke anomoly detection approach
 
 * Results
 
   _Purpose of Section:_ In this section, we will detail the results acheived following our methodology
+  
   _Topic Sentence:_ We recieved mixed results following our methodology
+  
   Prediction -- We are confident that a simple approach will perform adequately (but not necessarily impressively) on the data. We are not as certain about the performance of the anomoly/outlier approach. It could perform significantly better, it could perform roughly the same if not worse.
   
 * Discussion
 
   _Purpose of Section:_ In this section, we will analyze the meaning and significance of our results, and what further work exists to be done in the field.
+  
   _Topic Sentence:_ Our results are limited but nevertheless demonstrate promise of using neural networks in predicting fraud and opportunities to expand and solidify detection approaches.
+  
   _Subsection 1_: What our results show and do not show
+  
   _Subsection 2_: What opportunities exist looking forward
 
 * Reflection and Looking Forward
 
   _Purpose of Section:_ In this section, we will reflect more broadly upon what has been achieved, and what more compentent systems at the intersection of neural networks and fraud detection could mean for society.
+  
   _Topic Sentence:_ We are excited by the results that we attained through this project, and we believe there is much to be gained for society in the realm of neural network-enabled fraud detection.
 
 ## Citations
