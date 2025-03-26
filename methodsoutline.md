@@ -1,3 +1,4 @@
+# Methods Outline
 
 We have an existing dat set which has a very large number of negatives (fraud has not been charged) and few positive data points (fraud has been charged). 
 
