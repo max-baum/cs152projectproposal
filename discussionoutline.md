@@ -64,6 +64,13 @@ By leveraging the flexibility of neural networks, we hope to find patterns in fr
 * Discussion
 
    Using our custom dataset, we trained both a fully-connected neural network and a neural network focused on anonmoly detection.
+
+  Our models achieved varying levels of success. The following figures demonstrate this performance.
+
+  In tests, Model A achieved a higher true positive rate than Model B, meaning that the model was able to correctly identify confirmed fraud more frequently than Model B. This said, Model A had a higher false positive rate than Model B, meaning that Model A is incorrectly flagging loans as fraud more frequently than Model B. Ultimately, while Model B has the highest overall accuracy, this accuracy comes at the expense of missing confirmed positives.
+
+  Compared to other studies, our model XXXX.
+
   
 * Reflection and Looking Forward
 
