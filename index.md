@@ -6,3 +6,5 @@
 * [Related Works](https://max-baum.github.io/cs152projectproposal/relatedworks)
 * [Introduction Draft](https://max-baum.github.io/cs152projectproposal/introductiondraft)
 * [Methods Outline](https://max-baum.github.io/cs152projectproposal/methodsoutline)
+* [Discussion Outline](https://github.com/max-baum/cs152projectproposal/blob/main/discussionoutline.md)
+
