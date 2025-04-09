@@ -69,7 +69,9 @@ By leveraging the flexibility of neural networks, we hope to find patterns in fr
 
   In tests, Model A achieved a higher true positive rate than Model B, meaning that the model was able to correctly identify confirmed fraud more frequently than Model B. This said, Model A had a higher false positive rate than Model B, meaning that Model A is incorrectly flagging loans as fraud more frequently than Model B. Ultimately, while Model B has the highest overall accuracy, this accuracy comes at the expense of missing confirmed positives.
 
-  Compared to other studies, our model XXXX.
+  Compared to other studies, our models overall performed worse. This is due to limitations in both the model and the data.
+
+  While our models did not achieve ideal results, they nonetheless demonstrate the potential of our approach. We think the following steps can be followed to both improve our own model and to generally improve neural-network-based approaches to fraud detection moving forward.
 
   
 * Reflection and Looking Forward
