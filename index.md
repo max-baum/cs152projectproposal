@@ -7,5 +7,5 @@
 * [Introduction Draft](https://max-baum.github.io/cs152projectproposal/introductiondraft)
 * [Methods Outline](https://max-baum.github.io/cs152projectproposal/methodsoutline)
 * [Discussion Outline](https://max-baum.github.io/cs152projectproposal/discussionoutline)
-
+* [Completed First Draft](https://max-baum.github.io/cs152projectproposal/firstdraft)
 
