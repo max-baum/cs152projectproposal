@@ -19,44 +19,15 @@ Overall, this project does not seek to revolutionize or even directly inform an 
 
 ## Ethical sweep
 
-**General Questions:**
-* Should we even be doing this?
-  * Yes. There is significant merit and virtue in lessening fraud in government programs. Governments have limited resources, funded by a finite tax base, and it is pertinant that these resources are used properly and responsibly.
+There is significant merit in attempting to reduce fraud in government programs like the Paycheck Protection Program. Governments operate with limited resources funded by a finite tax base, and it is important that these resources are used responsibly and reach their intended recipients. Our project, while classroom-bound, aims to explore whether machine learning can assist in identifying potentially fraudulent loans — a task that holds real-world value.
 
-* What might be the accuracy of a simple non-ML alternative?
-  * Likely low, though uncertain. Given the broad array of attributes to consider, and the sophisticated relationships these attributes may have with the likelihood of a loan being fradulent, ML approaches seem most promising.
+That said, there are limitations and risks inherent to this work. The accuracy of a simple, non-ML rule-based approach is likely to be low given the number and complexity of variables involved, as well as the nuanced relationships between them. Machine learning, despite its promise, also comes with risks — especially when the ground truth is uncertain. A key challenge we face is that the majority of our dataset consists of loans that have not been confirmed either way; only a very small subset has been labeled as fraudulent through the justice system. This creates a problem of label scarcity and possible bias, as loans that have not yet been investigated might be wrongfully treated as negatives. Additionally, we acknowledge potential bias in the way this dataset was assembled and processed, which may affect our model’s fairness and reliability.
 
-* What processes will we use to handle appeals/mistakes?
-  *  Team communication will be frequent and transparent. Mistakes will be documented and brought up in team discussions, rather than ignored. Code and outputs will be verified independently by multiple team members, though outputs are unlikely to leave the classroom.
+We also recognize that our team, like most student groups at the 5Cs, is not demographically representative of the broader U.S. population. As such, our perspectives are inherently limited. Throughout the project, we aim to counterbalance this by engaging in frequent and transparent team discussions, especially around mistakes, uncertainties, and assumptions. Code and outputs will be reviewed by multiple team members to ensure accountability, and data will be spot-checked as time allows. Though our outputs are unlikely to leave the classroom, we believe in treating this project with the seriousness it deserves.
 
-* How diverse is our team?
-  * Any team of students at the 5Cs is not a comprehensive and proportional reflection of U.S. society. By that standard, our team is not diverse.
- 
-**Data Questions:**
-* Is our data valid for its intended use?
-  * Yes, with known and communicated limitations.
- 
-* What bias could be in our data? (All data contains bias.)
-  * It depends. We think the most likely source of bias is caused simply by the low throughput of the justice system, in that not all loans have been investigated equally for fraud. Depending upon how cases have progressed through the justice system, there could be bias especially given the limited number of positives we have. There could also be bias in other areas, including biases caused by Max in the processing and development of this dataset.
- 
-* How could we minimize bias in our data and model?
-  * This is a very complicated question given the nature of the data. One of the issues here is the lack of "real" negatives in the dataset, so maybe a clustering tecnique could be used here. We think there are quite a few procedural questions to discuss as we handle the data and develop the model. We cannot fix the SBA and the Department of Justice. We can neither confirm nor disprove fraud ourselves.
-    
-* How should we “audit” our code and data?
-  * The data can be spot-checked, or further if we have time, all 248 cases of confirmed fraud can be reviewed manually (though this may not be necessary). All code should be reviewed by multiple parties.
+In terms of privacy, all data used in this project is publicly available. Given the nature of the analysis, we believe there is minimal risk of infringing upon individuals' privacy or anonymity. However, we remain conscious of the ethical line between analysis and accusation. A flagged loan is not proof of fraud — only the justice system has the authority to make that determination. Our model is a retrospective tool, and should it be used in any future capacity, it would be most appropriate as part of a triage process rather than a definitive arbiter.
 
-**Impact Questions:**
-
-* Do we expect different errors rates for different sub-groups in the data?
-  * There is no reason to suspect we would, but we simply don't know. It is further unclear what a "sub-group" would constitute here, as we have limited information in SBA data identifying characteristics of businesses, rather information about the nature of the loans themselves.
-  
-* What are likely misinterpretations of the results and what can be done to prevent those misinterpretations?
-  * First and foremost, this is a retroactive assessment, and it cannot be directly applied toward proactive loan fraud prevention going forward.
-  * Secondly, even if this model could be used proactively, a postive indication of fraud by this model is not the confirmation of fraud. The only thing that can confirm fraud is the justice system. At most, this model could be used in the triaging of case work in fraud investigation.
-  * Misinterpretations should be prevented with clear communication of the models known capabilities and limitations, as clarified above and as will be further discussed among the team.
-    
-* How might we impinge individuals’ privacy and/or anonymity?
-  * All information used in our dataset is publically available. Given the nature of the dataset and analysis, there is little risk that this project will impede upon privacy rights of individuals.
+Lastly, we do not currently know if the model will perform differently across sub-groups, nor are we sure what constitutes a meaningful "sub-group" in the context of this data, given its limited granularity. Misinterpretations of the model’s outputs are a real concern and must be addressed through clear communication of its capabilities, limitations, and the fact that this is an exploratory academic project — not an instrument of policy or prosecution.
 
 
 ## Related Work
