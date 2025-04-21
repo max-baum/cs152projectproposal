@@ -58,7 +58,23 @@ The initial dataset included 41 fields, of varying datatypes. To make this data 
 
 Firstly, columns referring to the race, gender and ethnicity of the borrower were dropped from the dataset, as borrower-identity data was incomplete and we did not seek to interrogate the relation between borrower identity and likelihood of fraud.
 
-Next, 
+Next, categorical data fields with small sets of possible values (or important granular information) were directly converted to one hot encoding. Other categorical data fields were also converted to one-hot encoding, but included possible encoding for only top ten values in the set, as well as a possible "other" encoding. How each field was encoded is indicated in the table below
+
+| Column Name   | Encoding Process |
+| -------- | ------- |
+| NonProfit  | Direct Encoding    |
+| Veteran | Direct Encoding     |
+| BusinessType    | Direct Encoding    |
+| ProjectState  | Direct Encoding  |
+| BusinessAgeDescription | Direct Encoding     |
+| LMIIndicator    | Direct Encoding    |
+| HubzoneIndicator  | Direct Encoding    |
+| RuralUrbanIndicator | Direct Encoding     |
+| BorrowerState    | Direct Encoding   |
+| ProcessingMethod  | Direct Encoding0    |
+| Franchise Name | Top 10     |
+| OriginatingLender    | Top 10    |
+| NAICSCode  | Top 10    |
 
 ### Addressing Class Imbalance
 
