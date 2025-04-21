@@ -42,7 +42,20 @@ By leveraging the flexibility of neural networks, we hope to find patterns in fr
 
 ## Methods
 
-   ### Test
+### Creating the Dataset
+
+The dataset used in this report was compiled by Max Baum, Wonny Kwak, and Earn Wonghirundacha in a Computational Statistics course.
+
+Given the importance of the data in this project, the process of piecing together the dataset is briefly explored below.
+
+The dataset used in this project was produced with a multistep process to bridge two disparate datasets together. The first dataset was released by the Small Business Adminstration (SBA) under FOIA, and inlcudes all PPP loans over $150K in value. This dataset was found on Kaggle (Bukowski, 2020), though the SBA does release this data themselves. The Kaggle version of this dataset includes a separate sheet created by the author marking 100 instances of known fraud which were ultimately exploited. To find more cases of fraud in this PPP loan dataset, a tracker compiled by law firm Arnold & Porter of legal cases brought forth by the DOJ to address CARES Act fraud was referenced. 
+
+The two datasets use different identiers for businesses and loans, so to join the two datasets, press releases identified by Arnold & Porter were scraped from the DOJ. This scraped data was then searched through to find business names in the SBA dataset. Ultimately, 176 distinct loans from the SBA dataset were matched to the Arnold and Porter tracker. When combined with preidentified loans in the Kaggle dataset, a total of 248 loans were confirmed to be fraudulent. In the final dataset, the fradulent loans were marked with a "1" in a new fraud column, while loans not found to be fraudulent were marked with a "0"
+
+### Preprocessing the Data
+
+
+   ### Building the Neural Network
    
    
    We have an existing dataset which has a very large number of negatives (fraud has not been charged) and few positive data points (fraud has been charged). 
