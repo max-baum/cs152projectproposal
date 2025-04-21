@@ -86,8 +86,10 @@ The other balancing technique utilized in this project was weighting in cross en
 
 
 ### Building a simple fully connected neural network 
+{insert}
 
 ### Building an anomoly dection focused neural network
+{insert}
    
    
    We have an existing dataset which has a very large number of negatives (fraud has not been charged) and few positive data points (fraud has been charged). 
@@ -111,6 +113,17 @@ The other balancing technique utilized in this project was weighting in cross en
    We also plan to use dimensionality reduction techniques like t-SNE and UMAP to visualize how well fraud cases were clustered or separated.
 
 ## Results
+
+We recieved mixed results following our methodology, with our fully connected neural network performing decently, though no better than early results achieved using random forest models. We could not get our anomoly detection model to function correctly. 
+
+### Hyperparameters
+| Batch Size |      |
+| Number of epochs |      |
+| Layers and Layer Sizes |      |
+| Loss function |         |
+| Optimization function |        |
+
+
 
   _Purpose of Section:_ In this section, we will detail the results acheived following our methodology
   
