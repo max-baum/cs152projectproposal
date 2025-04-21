@@ -76,8 +76,13 @@ Next, categorical data fields with small sets of possible values (or important g
 | OriginatingLender    | Top 10    |
 | NAICSCode  | Top 10    |
 
+After this encoding, the data was further cleaned, and any other fields that were not inherently numwerical was converted to a numerical equivalent. The data was then normalized.
+
 ### Addressing Class Imbalance
 
+With only 248 confirmed cases of fraud, and over 900,000 loans that were not know to be fraud, the dataset used in this project was highly classed imbalanced. To address this imbalance, we used a variety of balancing techniques. The first technique was synthetic minority over-sampling technique (SMOTE), a process that generates synthetic data by interpollating between nearest neighbors in the minority class. SMOTE was only used to balance the training data. We used the SMOTE package from imblearning, creating a synthetic training dataset with an equal number of confirmed cases of fraud and non-confirmed fraud. Importantly, as SMOTE creates synthetic data through interpolation, syntehtic data would be created with fields intended to represent one-hot encoding carrying values containing non-integers. To fix this, after running SMOTE, for each row in the dataset, the highest value in each set of one-hot encoded values would be converted to a 1, and all other values in that set converted to a 0.
+
+The other balancing technique utilized in this project was weighting in cross entropy loss function. We set higher weights for misclassifying the minority class, such that calculated loss would be higher when misclassifcation of true positives occured. Thus, the model would be oriented to maximize true-positive classification rate to avoid overlooking positives, ultimately coming at the cost of incorreclty classifying more negatives as positives.
 
 
    ### Building the Neural Network
