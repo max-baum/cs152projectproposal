@@ -42,6 +42,9 @@ By leveraging the flexibility of neural networks, we hope to find patterns in fr
 
 ## Methods
 
+   # Test
+   
+   
    We have an existing dataset which has a very large number of negatives (fraud has not been charged) and few positive data points (fraud has been charged). 
    
    We plan to do some preprocessing we will clean, normalize, and design engineered features such as loan amount, business size, location, and NAICS codes to prepare for training. 
