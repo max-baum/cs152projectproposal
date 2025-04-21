@@ -85,7 +85,9 @@ With only 248 confirmed cases of fraud, and over 900,000 loans that were not kno
 The other balancing technique utilized in this project was weighting in cross entropy loss function. We set higher weights for misclassifying the minority class, such that calculated loss would be higher when misclassifcation of true positives occured. Thus, the model would be oriented to maximize true-positive classification rate to avoid overlooking positives, ultimately coming at the cost of incorreclty classifying more negatives as positives.
 
 
-   ### Building the Neural Network
+### Building a simple fully connected neural network 
+
+### Building an anomoly dection focused neural network
    
    
    We have an existing dataset which has a very large number of negatives (fraud has not been charged) and few positive data points (fraud has been charged). 
