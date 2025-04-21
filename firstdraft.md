@@ -52,7 +52,16 @@ The dataset used in this project was produced with a multistep process to bridge
 
 The two datasets use different identiers for businesses and loans, so to join the two datasets, press releases identified by Arnold & Porter were scraped from the DOJ. This scraped data was then searched through to find business names in the SBA dataset. Ultimately, 176 distinct loans from the SBA dataset were matched to the Arnold and Porter tracker. When combined with preidentified loans in the Kaggle dataset, a total of 248 loans were confirmed to be fraudulent. In the final dataset, the fradulent loans were marked with a "1" in a new fraud column, while loans not found to be fraudulent were marked with a "0"
 
-### Preprocessing the Data
+### Processing and Cleaning the Data
+
+The initial dataset included 41 fields, of varying datatypes. To make this data utilizeable by a neural network, significant processing had to be carried out.
+
+Firstly, columns referring to the race, gender and ethnicity of the borrower were dropped from the dataset, as borrower-identity data was incomplete and we did not seek to interrogate the relation between borrower identity and likelihood of fraud.
+
+Next, 
+
+### Addressing Class Imbalance
+
 
 
    ### Building the Neural Network
