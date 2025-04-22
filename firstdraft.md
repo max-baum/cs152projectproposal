@@ -145,6 +145,19 @@ We received mixed results following our methodology, with our fully connected ne
 
   While our models did not achieve ideal results, they nonetheless demonstrate the potential of our approach. We think the following steps can be followed to both improve our own model and to generally improve neural-network-based approaches to fraud detection moving forward.
 
+------------------------
+The performance of the fully-connected neural network models across two architectural variants reveals several important trends and limitations, especially in the context of imbalanced classification.
+
+Both confusion matrices bellow demonstrate the severe class imbalance in the dataset, with the vast majority of samples being labeled as negative (0). However, this imbalance is likely artificial, given that only a small set of known fraud cases have been labeled as such, while the rest are not verified negatives but rather unlabeled or unknown instances. This labeling strategy introduces noise and potential misrepresentation into model evaluation, especially regarding false negatives.
+
+In the first model (200-200-200 architecture), the model correctly identified 27 of the 50 actual positive cases (true positives), with 23 false negatives. However, it also produced 11,737 false positives out of 193,657 presumed negatives, resulting in a high false positive rate. This may be concerning as it does not minimize unnecessary investigations for real-world applications. Yet, given the potential that many of the negative-labeled cases could actually be fraudulent but unlabeled, false positives in this context might actually capture real fraud instances or characteristics that resemble confirmed positives.
+
+In the second model (214-214-100-50-25 architecture), the false positives decreased significantly to 4,827, but at the cost of true positives dropping to 23 and false negatives increasing to 27. This indicates a more conservative model that is less likely to flag loans as fraudulent, potentially leading to more missed fraud cases. Given the investigative nature of the task, this trade-off may be undesirable in comparison to the first one.
+
+Interestingly, increasing model depth and slightly varying neuron counts did not materially improve true positive detection, which stayed around 23–27 out of 50 positives. This suggests that model architecture alone may not solve the issue and further performance gains may require additional techniques. 
+
+A critical point is that traditional performance metrics (e.g., precision, accuracy) are not fully valid here due to the treatment of unknowns as negatives. The confusion matrix gives a partial view, but we cannot trust metrics that rely on true negatives, because many of these may be mislabeled or uncertain. As such, model performance should be viewed through the lens of investigative support rather than predictive certainty. A high false positive count may be acceptable if it leads to uncovering hidden fraudulent cases.
+
   
 ## Reflection and Looking Forward
 
