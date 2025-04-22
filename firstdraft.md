@@ -42,7 +42,9 @@ By leveraging the flexibility of neural networks, we hope to find patterns in fr
 
 ## Methods
 
-For this project, we decided a traditional fully connected Neural Network (NN) was the best solution. The data we are working with doesn't have any spatial or temporal components, thus Convolution and Recurrent NNs wouldn't provide any significant benefits. 
+For this project, we decided a traditional fully connected Neural Network (NN) was the best solution. The data we are working with doesn't have any spatial or temporal components, thus Convolution and Recurrent NNs wouldn't provide any significant benefits. Due to the class imbalance we were dealing with, we implemented a weighted Cross Entropy Loss which gave extra weight to misidentifying fraudulent loans. This is reasonable not only due to the class imbalance, but also because we consider it a lot more harmful for someone to get away with fraud than for us to misidentify an honest loan. We used a traditional Adam optimizer which has been shown to produce improved results compared to non-optimized neural networks. 
+
+In choosing the depth and size of the hidden layers, we included 20 layers in each hidden layer and varied the number of layers to use between 3 and 10. We decided 20 neurons in each hidden layer would be complex enough that the model can learn some patterns in the fraudulent cases without simply remembering the few cases of fraud that are verified to have occurred in our data. There isn't a good way to determine the optimal number of layers, so that is why we decided to vary this and check the accuracy as the number of layers changed. 
 
 ### Creating the Dataset
 
