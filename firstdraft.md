@@ -135,15 +135,17 @@ Our parameter tuning results can be viewed below.
 
 #### Tuning Number of Epochs
 
-![idk](acc_by_epoch.png)
+The first tuning assessment we conducted was to observe how the accuracy of the model we built changes as more epochs of the model were conducted. In this specific setup, the model was composed of six hidden layers of twenty perceptrons, and postive miscalcuation was penalized 50x as much as negative miscalculation in the loss function. Epoch-by-epoch, true-positive accuracy rates dropped and true-negative accuracy rates increased. This phenomena demonstrates the tradeoff between the two accuracies. It also underscores that the further training of the model will not necessarily allow simeltaneous improvement to true-positive and true-negative accuracy rates.  
+
+![Model accuracies by epoch](acc_by_epoch.png)
 
 #### Tuning Loss Function Classification Weighting
 
-![idk](acc_by_weights.png)
+![Model accuracies by weight](acc_by_weights.png)
 
 #### Tuning depth of network
 
-![idk](acc_by_layers.png)
+![Model accuracies by network depth](acc_by_layers.png)
 
 
 
