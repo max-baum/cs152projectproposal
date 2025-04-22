@@ -122,12 +122,13 @@ We received mixed results following our methodology, with our fully connected ne
 
 ### Hyper parameters
 
+| Parameter | Value |
 | ------ | ------|
-| Batch Size |      |
-| Number of epochs |      |
-| Layers and Layer Sizes |      |
-| Loss function |         |
-| Optimization function |        |
+| Batch Size |  128  |
+| Number of epochs |  Variable  |
+| Layers and Layer Sizes |   Variable, typically 20 perceptrons per layer  |
+| Loss function |     Cross Entropy Loss With Weights    |
+| Optimization function |    Adam  |
 
 
 
