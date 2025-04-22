@@ -119,6 +119,7 @@ The other balancing technique utilized in this project was weighting in cross en
 We received mixed results following our methodology, with our fully connected neural network performing decently, though no better than early results achieved using random forest models. We could not get our anomaly detection model to function correctly. 
 
 ### Hyper parameters
+| ------ | ------|
 | Batch Size |      |
 | Number of epochs |      |
 | Layers and Layer Sizes |      |
