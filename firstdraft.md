@@ -120,11 +120,14 @@ In choosing the depth and size of the hidden layers, we included 20 layers in ea
 We received mixed results following our methodology, with our fully connected neural network performing decently, though no better than early results achieved using random forest models. We could not get our anomaly detection model to function correctly. 
 
 ### Hyper parameters
-| Batch Size |      |
-| Number of epochs |      |
-| Layers and Layer Sizes |      |
-| Loss function |         |
-| Optimization function |        |
+
+| Parameter | Value |
+| ------ | ------|
+| Batch Size |  128  |
+| Number of epochs |  Variable  |
+| Layers and Layer Sizes |   Variable, typically 20 perceptrons per layer  |
+| Loss function |     Cross Entropy Loss With Weights    |
+| Optimization function |    Adam  |
 
 
 
