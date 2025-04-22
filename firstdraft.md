@@ -131,7 +131,21 @@ We received mixed results following our methodology, with our fully connected ne
 
 We attempted tuning a variety of hyper parameters to assess how changing these hyper parameters may impact the accuracy of our model. Note, we consider accuracy as two seperate measures here. Specifically, we isolate true-positive and true-negative rates, as considering a blended accuracy rate would favor a scenario where all positives are marked as negatives. Remember, but 0.03% of our data is in the positive class.
 
-Our parameter tuning work can be viewed below
+Our parameter tuning results can be viewed below.
+
+#### Tuning Number of Epochs
+
+![idk](acc_by_epoch.png)
+
+#### Tuning Loss Function Classification Weighting
+
+![idk](acc_by_weights.png)
+
+#### Tuning depth of network
+
+![idk](acc_by_layers.png)
+
+
 
 #### Test
 
