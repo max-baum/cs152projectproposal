@@ -127,11 +127,17 @@ The second tuning assessment we caried out was to examine how changing the weigh
 
 #### Tuning depth of network
 
+Finally, we attempted to ascertain how increasing the number of 20-perceptron level increases model performance. While trends are somewhat ambiguous in the graph below, it appears that depth past three layers did not affect the model accuracy substantially (though the model may, overall, improve slightly as its depth is increased). Note that the dramatic swings in true-positive accuracy rates may to some extent be coincidental, as the positive validation dataset includes only ~40 datapoints. 
+
 ![Model accuracies by network depth](acc_by_layers.png)
 
 
 
-#### Test
+#### Overall Accuracy
+
+Assessing the overall accuracy of this model is an exercize in making implementation decisions. This model would simply be most accurate if all positives were to be marked as negatives, because there are drastically more negatives than positives in the dataset. But, doing this would fail to identifying fraud that costs taxpayers billions of dollars.
+
+In the real world, if we were to make deployment decisions about the model, the question to ask would likely be "how many false positives are we willing to sift through to find the true positives." There are clearly favorable configurations of the neural network that flag a substantial portion of the positives as positives, while only flagging a small portion of negatives as positives. For example, with a XXX XXXX. A system with this accuracy profile could be used to triage case work and capture low hanging fruit. To look at XXXX loans is a lot easier than XXXX.
 
 
 
