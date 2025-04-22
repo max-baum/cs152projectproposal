@@ -119,7 +119,7 @@ In choosing the depth and size of the hidden layers, we included 20 layers in ea
 
 We received mixed results following our methodology, with our fully connected neural network performing decently, though no better than early results achieved using random forest models. We could not get our anomaly detection model to function correctly. 
 
-### Hyper parameters
+### Tuning Hyper Parameters
 
 | Parameter | Value |
 | ------ | ------|
@@ -128,6 +128,12 @@ We received mixed results following our methodology, with our fully connected ne
 | Layers and Layer Sizes |   Variable, typically 20 perceptrons per layer  |
 | Loss function |     Cross Entropy Loss With Weights    |
 | Optimization function |    Adam  |
+
+We attempted tuning a variety of hyper parameters to assess how changing these hyper parameters may impact the accuracy of our model. Note, we consider accuracy as two seperate measures here. Specifically, we isolate true-positive and true-negative rates, as considering a blended accuracy rate would favor a scenario where all positives are marked as negatives. Remember, but 0.03% of our data is in the positive class.
+
+Our parameter tuning work can be viewed below
+
+#### Test
 
 
 
