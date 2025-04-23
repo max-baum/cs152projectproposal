@@ -155,6 +155,7 @@ Assessing the overall accuracy of this model is an exercize in making implementa
 
 In the real world, if we were to make deployment decisions about the model, the question to ask would likely be "how many false positives are we willing to sift through to find the true positives." There are clearly favorable configurations of the neural network that flag a substantial portion of the positives as positives, while only flagging a small portion of negatives as positives. For example, when using a model where OHE was not applied after SMOTE, only 2% of loans would have to be looked at to identify almost 50% of the fraud. A system with this accuracy profile could be used to triage case work and capture low hanging fruit. To look at 18,000 loans is a lot easier than 900,000.
 
+
 ## Discussion
 
 -- This needs to be updated further -- 
