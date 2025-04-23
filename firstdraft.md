@@ -139,9 +139,17 @@ Finally, we attempted to ascertain how increasing the number of 20-perceptron le
 
 ### SMOTE and One-Hot Encoding
 
-Interestingly, we observed that after training our model on data that had one-hot encoding reapplied after SMOTE, our model performed worse on validation than simply on training data where SMOTE was applied and not adjusted to reapply one-hot encoding.
+Interestingly, we observed that after training our model on data that had one-hot encoding reapplied after SMOTE, our model performed worse on validation than simply on training data where SMOTE was applied and the training data was not adjusted to reapply one-hot encoding. This reality is demonstrated in the graphs below, and we are actively seeking to determine why this is occuring
 
-#### Overall Accuracy
+#### Training Data Adjusted to Reapply OHE After SMOTE
+
+![ohe readjustment](accuracy_ohe.png)
+
+#### Training Data Not Readjusted After SMOTE
+
+![no ohe readjustment](accuracy_no_ohe.png)
+
+### Overall Accuracy
 
 Assessing the overall accuracy of this model is an exercize in making implementation decisions. This model would simply be most accurate if all positives were to be marked as negatives, because there are drastically more negatives than positives in the dataset. But, doing this would fail to identifying fraud that costs taxpayers billions of dollars.
 
