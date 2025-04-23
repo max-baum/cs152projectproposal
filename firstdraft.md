@@ -1,4 +1,4 @@
-# Paycheck Protection Plan (PPP) Loan Fraud Detection OUTLINE
+# Paycheck Protection Plan (PPP) Loan Fraud Detection Project Draft
 
 ## Authors
 Max Baum, Arsh Chhabra, Cameron Hatler, Viren Jain
@@ -137,7 +137,9 @@ Finally, we attempted to ascertain how increasing the number of 20-perceptron le
 
 ![Model accuracies by network depth](acc_by_layers.png)
 
+### SMOTE and One-Hot Encoding
 
+Interestingly, we observed that after training our model on data that had one-hot encoding reapplied after SMOTE, our model performed worse on validation than simply on training data where SMOTE was applied and not adjusted to reapply one-hot encoding.
 
 #### Overall Accuracy
 
