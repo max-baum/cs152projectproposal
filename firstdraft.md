@@ -174,10 +174,8 @@ A critical point is that traditional performance metrics (e.g., precision, accur
 
   
 ## Reflection and Looking Forward
-
-  _Purpose of Section:_ In this section, we will reflect more broadly upon what has been achieved, and what more component systems at the intersection of neural networks and fraud detection could mean for society.
   
-  _Topic Sentence:_ We are excited by the results that we attained through this project, and we believe there is much to be gained for society in the realm of neural network-enabled fraud detection.
+We are excited by the results that we attained through this project, and we believe there is much to be gained for society in the realm of neural network-enabled fraud detection. Our models demonstrated true competency in discriminating between loans confirmed to be fraud and those not confirmed to be. While the models may still incur a small but non-zero false-positive rate that can become significant over the span of hundreds of thousands of loans, we believe our model could be used in case work to drastically reduce the amount of time required to identify a substantive portion of the cases of fraud. Yes, an auditor may need to still review 20,000 flagged loans to isolate those that are truly fraud, but this is much less work than reviewing 960,000!
 
 ## Citations
 [^1]: https://www.kaggle.com/datasets/danb91/covid-ppp-loan-data-with-fraud-examples?select=ppp_fraud_cases.csv
