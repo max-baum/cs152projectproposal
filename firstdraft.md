@@ -149,24 +149,17 @@ In the real world, if we were to make deployment decisions about the model, the 
 
 ## Discussion
 
-   Using our custom dataset, we trained both a fully-connected neural network and a neural network focused on anomaly detection.
+-- This needs to be updated further -- 
 
-  Our models achieved varying levels of success. The following figures demonstrate this performance.
-
-  In tests, Model A achieved a higher true positive rate than Model B, meaning that the model was able to correctly identify confirmed fraud more frequently than Model B. This said, Model A had a higher false positive rate than Model B, meaning that Model A is incorrectly flagging loans as fraud more frequently than Model B. Ultimately, while Model B has the highest overall accuracy, this accuracy comes at the expense of missing confirmed positives.
-
-  Compared to other studies, our models overall performed worse. This is due to limitations in both the model and the data.
-
-  While our models did not achieve ideal results, they nonetheless demonstrate the potential of our approach. We think the following steps can be followed to both improve our own model and to generally improve neural-network-based approaches to fraud detection moving forward.
-
-------------------------
 The performance of the fully-connected neural network models across two architectural variants reveals several important trends and limitations, especially in the context of imbalanced classification.
 
 Both confusion matrices bellow demonstrate the severe class imbalance in the dataset, with the vast majority of samples being labeled as negative (0). However, this imbalance is likely artificial, given that only a small set of known fraud cases have been labeled as such, while the rest are not verified negatives but rather unlabeled or unknown instances. This labeling strategy introduces noise and potential misrepresentation into model evaluation, especially regarding false negatives.
 
+-- Update accuracy numbers once we decide upon which model to use and if we fix OHE after SMOTE --
 In the first model (200-200-200 architecture), the model correctly identified 27 of the 50 actual positive cases (true positives), with 23 false negatives. However, it also produced 11,737 false positives out of 193,657 presumed negatives, resulting in a high false positive rate. This may be concerning as it does not minimize unnecessary investigations for real-world applications. Yet, given the potential that many of the negative-labeled cases could actually be fraudulent but unlabeled, false positives in this context might actually capture real fraud instances or characteristics that resemble confirmed positives.
 
 In the second model (214-214-100-50-25 architecture), the false positives decreased significantly to 4,827, but at the cost of true positives dropping to 23 and false negatives increasing to 27. This indicates a more conservative model that is less likely to flag loans as fraudulent, potentially leading to more missed fraud cases. Given the investigative nature of the task, this trade-off may be undesirable in comparison to the first one.
+
 
 Interestingly, increasing model depth and slightly varying neuron counts did not materially improve true positive detection, which stayed around 23–27 out of 50 positives. This suggests that model architecture alone may not solve the issue and further performance gains may require additional techniques. 
 
@@ -175,7 +168,9 @@ A critical point is that traditional performance metrics (e.g., precision, accur
   
 ## Reflection and Looking Forward
   
-We are excited by the results that we attained through this project, and we believe there is much to be gained for society in the realm of neural network-enabled fraud detection. Our models demonstrated true competency in discriminating between loans confirmed to be fraud and those not confirmed to be. While the models may still incur a small but non-zero false-positive rate that can become significant over the span of hundreds of thousands of loans, we believe our model could be used in case work to drastically reduce the amount of time required to identify a substantive portion of the cases of fraud. Yes, an auditor may need to still review 20,000 flagged loans to isolate those that are truly fraud, but this is much less work than reviewing 960,000!
+We are excited by the results that we attained through this project, and we believe there is much to be gained for society in the realm of neural network-enabled fraud detection. Our models demonstrated true competency in discriminating between loans confirmed to be fraud and those not confirmed to be. Yes, the models may still incur a small but non-zero false-positive rate that can become significant over the span of hundreds of thousands of loans, we believe our model could be used in case work to drastically reduce the amount of time required to identify a substantive portion of the cases of fraud. Yes, an auditor may need to still review 20,000 flagged loans to isolate those that are truly fraud, but this is much less work than reviewing 960,000!
+
+While we were ultimately not able to 
 
 ## Citations
 [^1]: https://www.kaggle.com/datasets/danb91/covid-ppp-loan-data-with-fraud-examples?select=ppp_fraud_cases.csv
