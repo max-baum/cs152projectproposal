@@ -17,7 +17,7 @@ This project is focused on investigating what neural network based approaches ca
 
 Overall, this project does not seek to revolutionize or even directly inform an government decision-making in the issuance of small business loans. Rather, it seems to demonstrate the promise of increasing data-driven governance, and to confirm the existence of structure in data that can be used to guide better decision making. $60 billion is a heck of a lot of money to be lost to fraudulent activity, in times when American taxpayers are increasingly squeezed financially. One would hope that failures of this magnitude could be better derisked against moving forward.
 
-## Ethical sweep
+## Ethical Sweep
 
 There is significant merit in attempting to reduce fraud in government programs like the PPP. Governments operate with limited resources funded by a finite tax base, and it is important that these resources are used responsibly and reach their intended recipients. Our project, while classroom-bound, aims to explore whether machine learning can assist in identifying potentially fraudulent loans — a task that holds real-world value.
 
@@ -83,13 +83,13 @@ With only 248 confirmed cases of fraud, and over 900,000 loans that were not kno
 The other balancing technique utilized in this project was weighting in cross entropy loss function. We set higher weights for misclassifying the minority class, such that calculated loss would be higher when misclassifcation of true positives occurred. Thus, the model would be oriented to maximize true-positive classification rate to avoid overlooking positives, ultimately coming at the cost of incorrectly classifying more negatives as positives.
 
 
-### Building a simple fully connected neural network 
+### Building a Simple Fully Connected Neural Network 
 
 For this project, we decided a traditional fully connected Neural Network (NN) was the best solution. The data we are working with doesn't have any spatial or temporal components, thus Convolution and Recurrent NNs wouldn't provide any significant benefits. Due to the class imbalance we were dealing with, we implemented a weighted Cross Entropy Loss which gave extra weight to misidentifying fraudulent loans. This is reasonable not only due to the class imbalance, but also because we consider it a lot more harmful for someone to get away with fraud than for us to misidentify an honest loan. We used a traditional Adam optimizer which has been shown to produce improved results compared to non-optimized neural networks. 
 
 In choosing the depth and size of the hidden layers, we included 20 neurons in each hidden layer and varied the number of layers to use between 3 and 10. We decided 20 neurons in each hidden layer would be complex enough that the model can learn some patterns in the fraudulent cases without simply remembering the few cases of fraud that are verified to have occurred in our data. There isn't a good way to determine the optimal number of layers, so that is why we decided to vary this and check the accuracy as the number of layers changed. We did attempt it for other values of neurons and found 20 to be a reasonable value that avoided overfitting and provided sufficient flexibility. 
 
-### Building an anomaly detection focused neural network
+### Building an Anomaly Detection Focused Neural Network
 
 As part of our exploration beyond standard supervised methods, we experimented with anomaly detection using one class neural networks (OC NN) (Chalapathy et al. 2018 [^4]). This method differed from several common approaches as it combines feature learning and anomaly detection in a single framework. The goal is to train a neural network that learns a compact representation of "normal" data and flags anything that falls outside this learned boundary as an anomaly. That is this technique essentially aims to create a decision boundary in high dimensional space within which everything is normal and outside of which is abnormal using a deep one class neural network. They do this by adapting the objective of one class SVMs into a neural setting.
 
@@ -129,7 +129,7 @@ The second tuning assessment we caried out was to examine how changing the weigh
 
 ![Model accuracies by weight](acc_by_weights.png)
 
-#### Tuning depth of network
+#### Tuning Depth of Network
 
 Finally, we attempted to ascertain how increasing the number of 20-perceptron level increases model performance. While trends are somewhat ambiguous in the graph below, it appears that depth past three layers did not affect the model accuracy substantially (though the model may, overall, improve slightly as its depth is increased). Note that the dramatic swings in true-positive accuracy rates may to some extent be coincidental, as the positive validation dataset includes only ~40 datapoints. 
 
