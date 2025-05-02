@@ -101,7 +101,7 @@ To conclude although the theory behind one class neural nets and anomaly detecti
 
 ## Results
 
-We received mixed results following our methodology, with our fully connected neural network performing decently, though no better than early results achieved using random forest models. We could not get our anomaly detection model to function correctly. 
+We received mixed results following our methodology, with our fully connected neural network performing decently, though no better than early results achieved using random forest models [^6]. We could not get our anomaly detection model to function correctly. 
 
 ### Tuning Hyper Parameters
 
@@ -186,3 +186,4 @@ While we were ultimately unable to implement an anomoly detection based neural n
 [^3]: https://link.springer.com/chapter/10.1007/978-3-030-96305-7_43
 [^4]: https://arxiv.org/abs/1802.06360
 [^5]: https://www.researchgate.net/publication/329829847_Deep_One-Class_Classification
+[^6]: https://github.com/max-baum/cs152projectrepo; see `CompStats_ProjectWriteup` for more detail, note repo is private and access must be requested.
