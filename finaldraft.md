@@ -109,7 +109,7 @@ We received mixed results following our methodology, with our fully connected ne
 | ------ | ------|
 | Batch Size |  128  |
 | Number of epochs |  Variable  |
-| Layers and Layer Sizes |   Variable, typically 20 perceptrons per layer  |
+| Layers and Layer Sizes |   Variable, typically 20 neurons per layer  |
 | Loss function |     Cross Entropy Loss With Weights    |
 | Optimization function |    Adam  |
 
@@ -131,7 +131,7 @@ The second tuning assessment we caried out was to examine how changing the weigh
 
 #### Tuning Depth of Network
 
-Finally, we attempted to ascertain how increasing the number of 20-perceptron level increases model performance. While trends are somewhat ambiguous in the graph below, it appears that depth past three layers did not affect the model accuracy substantially (though the model may, overall, improve slightly as its depth is increased). Note that the dramatic swings in true-positive accuracy rates may to some extent be coincidental, as the positive validation dataset includes only ~40 datapoints. 
+Finally, we attempted to ascertain how increasing the number of 20-neuron layers increases model performance. While trends are somewhat ambiguous in the graph below, it appears that depth past three layers did not affect the model accuracy substantially (though the model may, overall, improve slightly as its depth is increased). Note that the dramatic swings in true-positive accuracy rates may to some extent be coincidental, as the positive validation dataset includes only ~40 datapoints. 
 
 ![Model accuracies by network depth](acc_by_layers.png)
 
