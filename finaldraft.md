@@ -147,6 +147,9 @@ Interestingly, we observed that after training our model on data that had one-ho
 
 ![no ohe readjustment](accuracy_no_ohe.png)
 
+Much like for the OHE re-encoded models, parameters in the model without OHE re-encoding could be altered as to enable the model to perform in certain ways. For example, the overweighting of positive misclassification can be increased to decrease the rate of false positives. This is visible in the chart below.
+![no_ohe_readjustment_750](accuracy_no_ohe750.png)
+
 ### Overall Accuracy
 
 Assessing the overall accuracy of this model is an exercize in making implementation decisions. This model would simply be most "accurate" if all positives were to be marked as negatives, because there are drastically more negatives than positives in the dataset. But, doing this would fail to identifying fraud that costs taxpayers billions of dollars.
