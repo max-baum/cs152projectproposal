@@ -54,7 +54,7 @@ The two datasets use different identifiers for businesses and loans, so to join 
 
 The initial dataset included 41 fields, of varying datatypes. To make this data utilizable by a neural network, significant processing had to be carried out.
 
-Firstly, columns referring to the race, gender and ethnicity of the borrower were dropped from the dataset, as borrower-identity data was incomplete and we did not seek to interrogate the relation between borrower identity and likelihood of fraud. We would like to acknowledge that such information may be available to be inferred from the data, however, for a student run project doing so would be intractable. 
+Firstly, columns referring to the race, gender and ethnicity of the borrower were dropped from the dataset, as borrower-identity data was incomplete and we did not seek to interrogate the relation between borrower identity and likelihood of fraud. We do acknowledge that such relations may exist in the data, however, for a student run project doing so would be intractable. Relations between reported identity and fraud could be partically interesting to analyze if there are differences in controls that exist between general SBA dispersement programs and dispersment for underresourced communities.   
 
 Next, categorical data fields with small sets of possible values (or important granular information) were directly converted to one hot encoding. Other categorical data fields were also converted to one-hot encoding, but included possible encoding for only top ten values in the set, as well as a possible "other" encoding. How each field was encoded is indicated in the table below
 
@@ -78,7 +78,7 @@ After this encoding, the data was further cleaned, and any other fields that wer
 
 ### Addressing Class Imbalance
 
-With only 248 confirmed cases of fraud, and over 900,000 loans that were not know to be fraud, the dataset used in this project was highly classed imbalanced. To address this imbalance, we used a variety of balancing techniques. The first technique was synthetic minority over-sampling technique (SMOTE), a process that generates synthetic data by interpolating between nearest neighbors in the minority class. SMOTE was only used to balance the training data. We used the SMOTE package from imblearning, creating a synthetic training dataset with an equal number of confirmed cases of fraud and non-confirmed fraud. Importantly, as SMOTE creates synthetic data through interpolation, synthetic data would be created with fields intended to represent one-hot encoding carrying values containing non-integers. To fix this, after running SMOTE, for each row in the dataset, the highest value in each set of one-hot encoded values would be converted to a 1, and all other values in that set converted to a 0.
+With only 248 confirmed cases of fraud, and over 900,000 loans that were not know to be fraud, the dataset used in this project was highly classed imbalanced. To address this imbalance, we used a variety of balancing techniques. The first technique was synthetic minority over-sampling technique (SMOTE), a process that generates synthetic data by interpolating between nearest neighbors in the minority class. SMOTE was only used to balance the training data. We used the SMOTE package from imblearning [^6], creating a synthetic training dataset with an equal number of confirmed cases of fraud and non-confirmed fraud. Importantly, as SMOTE creates synthetic data through interpolation, synthetic data would be created with fields intended to represent one-hot encoding carrying values containing non-integers. To fix this, after running SMOTE, for each row in the dataset, the highest value in each set of one-hot encoded values would be converted to a 1, and all other values in that set converted to a 0.
 
 The other balancing technique utilized in this project was weighting in cross entropy loss function. We set higher weights for misclassifying the minority class, such that calculated loss would be higher when misclassifcation of true positives occurred. Thus, the model would be oriented to maximize true-positive classification rate to avoid overlooking positives, ultimately coming at the cost of incorrectly classifying more negatives as positives.
 
@@ -101,7 +101,7 @@ To conclude although the theory behind one class neural nets and anomaly detecti
 
 ## Results
 
-We received mixed results following our methodology, with our fully connected neural network performing decently, though no better than early results achieved using random forest models [^6]. We could not get our anomaly detection model to function correctly. 
+We received mixed results following our methodology, with our fully connected neural network performing decently, though no better than early results achieved using random forest models [^7]. We could not get our anomaly detection model to function correctly. 
 
 ### Tuning Hyper Parameters
 
@@ -186,4 +186,5 @@ While we were ultimately unable to implement an anomoly detection based neural n
 [^3]: https://link.springer.com/chapter/10.1007/978-3-030-96305-7_43
 [^4]: https://arxiv.org/abs/1802.06360
 [^5]: https://www.researchgate.net/publication/329829847_Deep_One-Class_Classification
-[^6]: https://github.com/max-baum/cs152projectrepo; see `CompStats_ProjectWriteup` for more detail, note repo is private and access must be requested.
+[^6]: https://imbalanced-learn.org/stable/#
+[^7]: https://github.com/max-baum/cs152projectrepo; see `CompStats_ProjectWriteup` for more detail, note repo is private and access must be requested.
