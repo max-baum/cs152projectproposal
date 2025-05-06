@@ -173,7 +173,7 @@ In this configuration:
 - The model correctly flags 72% of known frauds (36 out of 50).
 - It requires investigation of only ~15% of the total dataset (28,617 out of ~193,700 samples).
 
-This means that regulators could examine just 18,000 flagged loans (rather than 900,000) and still capture the majority of known fraud cases. That’s a significant reduction in investigative effort with strong payoff. This model is not perfect—it generates many false positives. But in fraud detection, missing fraud is more costly than over-flagging clean loans. Given the severe class imbalance, data noise, and adversarial nature of the problem (i.e., fraudsters trying to appear “normal”), this trade-off is reasonable.
+This means that regulators could examine just 18,000 flagged loans (rather than 900,000) and still capture the majority of known fraud cases. That’s a significant reduction in investigative effort with strong payoff. This model is not perfect as it generates many false positives. But in fraud detection, missing fraud is more costly than over-flagging clean loans. Given the severe class imbalance, data noise, and adversarial nature of the problem (i.e., fraudsters trying to appear “normal”), this trade-off is reasonable.
 
 Overal, we found that re-encoding one-hot fields after SMOTE hurts performance. Our best model avoided this and preserved interpolated structure. High positive class weights also significantly improve true positive rates. This reflects the real-world priority of identifying fraud, even at the cost of false positives. Additionally, deeper networks beyond 3–6 layers provided minimal benefit and could result in overfitting. Added depth did not consistently improve accuracy, likely due to the saturation of noise in the dataset.
 
