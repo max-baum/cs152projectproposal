@@ -161,7 +161,7 @@ In the real world, if we were to make deployment decisions about the model, the 
 
 -- This needs to be updated further -- 
 
-The results of our best-performing model, using a fully connected neural network with a positive class misclassification weight of 750 and no re-encoding of one-hot features after SMOTE, offer a revealing snapshot of both progress and limitation in PPP fraud detection.
+The results of our best-performing model, using a fully connected neural network with a positive class misclassification weight of 750 and no re-encoding of one-hot features after SMOTE, offer a revealing snapshot of both progress and limitation in PPP fraud detection. The confusion matrix below shows the class imbalance. 
 
 ![confusion matrix for non re-encoded data](ohenonfixed_750weight.png)
 
