@@ -1,4 +1,4 @@
-# Paycheck Protection Program (PPP) Loan Fraud Detection Project Draft
+# Paycheck Protection Program (PPP) Loan Fraud Detection
 
 ## Authors
 Max Baum, Arsh Chhabra, Cameron Hatler, Viren Jain
