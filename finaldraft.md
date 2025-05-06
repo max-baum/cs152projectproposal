@@ -161,13 +161,13 @@ In the real world, if we were to make deployment decisions about the model, the 
 
 -- This needs to be updated further -- 
 
-The results of our best-performing model—using a fully connected neural network with a positive class misclassification weight of 750 and no re-encoding of one-hot features after SMOTE—offer a revealing snapshot of both progress and limitation in PPP fraud detection.
+The results of our best-performing model, using a fully connected neural network with a positive class misclassification weight of 750 and no re-encoding of one-hot features after SMOTE, offer a revealing snapshot of both progress and limitation in PPP fraud detection.
 
 ![confusion matrix for non re-encoded data](ohenonfixed_750weight.png)
 
 At face value, these results reflect significant imbalance. The model incorrectly flags over 28,000 loans as potentially fraudulent and still misses 14 confirmed frauds. However, this framing is misleading.
 
-Most of the ~193,000 negative examples in our dataset are not truly verified as clean. They simply haven't been confirmed as fraudulent, which makes traditional evaluation metrics—like precision, recall, and accuracy—unreliable. Many so-called false positives may, in fact, be unconfirmed fraud cases. We believe the model is best interpreted as a tool to identify potential for fraud.
+Most of the ~193,000 negative examples in our dataset are not truly verified as clean. They simply haven't been confirmed as fraudulent, which makes traditional evaluation metrics like precision, recall, and accuracy unreliable. Many so-called false positives may, in fact, be unconfirmed fraud cases. We believe the model is best interpreted as a tool to identify potential for fraud.
 
 In this configuration:
 - The model correctly flags 72% of known frauds (36 out of 50).
