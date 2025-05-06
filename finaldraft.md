@@ -161,6 +161,24 @@ In the real world, if we were to make deployment decisions about the model, the 
 
 -- This needs to be updated further -- 
 
+The results of our best-performing model—using a fully connected neural network with a positive class misclassification weight of 750 and no re-encoding of one-hot features after SMOTE—offer a revealing snapshot of both progress and limitation in PPP fraud detection.
+
+![confusion matrix for non re-encoded data](ohenonfixed_750weight.png)
+
+At face value, these results reflect significant imbalance. The model incorrectly flags over 28,000 loans as potentially fraudulent and still misses 14 confirmed frauds. However, this framing is misleading.
+
+Most of the ~193,000 negative examples in our dataset are not truly verified as clean. They simply haven't been confirmed as fraudulent, which makes traditional evaluation metrics—like precision, recall, and accuracy—unreliable. Many so-called false positives may, in fact, be unconfirmed fraud cases. We believe the model is best interpreted as a tool to identify potential for fraud.
+
+In this configuration:
+- The model correctly flags 72% of known frauds (36 out of 50).
+- It requires investigation of only ~15% of the total dataset (28,617 out of ~193,700 samples).
+
+This means that regulators could examine just 18,000 flagged loans (rather than 900,000) and still capture the majority of known fraud cases. That’s a significant reduction in investigative effort with strong payoff. This model is not perfect—it generates many false positives. But in fraud detection, missing fraud is more costly than over-flagging clean loans. Given the severe class imbalance, data noise, and adversarial nature of the problem (i.e., fraudsters trying to appear “normal”), this trade-off is reasonable.
+
+Overal, we found that re-encoding one-hot fields after SMOTE hurts performance. Our best model avoided this and preserved interpolated structure. High positive class weights also significantly improve true positive rates. This reflects the real-world priority of identifying fraud, even at the cost of false positives. Additionally, deeper networks beyond 3–6 layers provided minimal benefit and could result in overfitting. Added depth did not consistently improve accuracy, likely due to the saturation of noise in the dataset.
+
+----------------- Old Discussion 
+
 The performance of the fully-connected neural network models across two architectural variants reveals several important trends and limitations, especially in the context of imbalanced classification.
 
 Both confusion matrices bellow demonstrate the severe class imbalance in the dataset, with the vast majority of samples being labeled as negative (0). However, this imbalance is likely artificial, given that only a small set of known fraud cases have been labeled as such, while the rest are not verified negatives but rather unlabeled or unknown instances. This labeling strategy introduces noise and potential misrepresentation into model evaluation, especially regarding false negatives.
