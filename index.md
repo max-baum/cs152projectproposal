@@ -8,4 +8,4 @@
 * [Methods Outline](https://max-baum.github.io/cs152projectproposal/methodsoutline)
 * [Discussion Outline](https://max-baum.github.io/cs152projectproposal/discussionoutline)
 * [Completed First Draft](https://max-baum.github.io/cs152projectproposal/firstdraft)
-
+* [Final Draft](https://max-baum.github.io/cs152projectproposal/finaldraft)
