@@ -141,7 +141,7 @@ Finally, we attempted to ascertain how increasing the number of 20-neuron layers
 
 ### SMOTE and One-Hot Encoding
 
-Interestingly, we observed that after training our model on data that had one-hot encoding reapplied after SMOTE, our model performed worse on validation than simply on training data where SMOTE was applied and the training data was not adjusted to reapply one-hot encoding. We are not sure re-encoding hurts performance, but hypotheses could include that SMOTE actually introduces more nuanced boundaries between classes that are easier for models to learn. Further inquiry into this finding could prove fruitful when designing fraud detection systems with minimal data in the positive class.
+Interestingly, we observed that after training our model on data that had one-hot encoding reapplied after SMOTE, our model performed worse on validation than simply on training data where SMOTE was applied and the training data was not adjusted to reapply one-hot encoding. We are not sure why re-encoding hurts performance, but hypotheses could include that SMOTE actually introduces more nuanced boundaries between classes that are easier for models to learn. Further inquiry into this finding could prove fruitful when designing fraud detection systems with minimal data in the positive class.
 
 #### Training Data Adjusted to Reapply OHE After SMOTE
 
