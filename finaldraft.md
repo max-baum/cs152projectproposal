@@ -117,7 +117,7 @@ We received mixed results following our methodology, with our fully connected ne
 | Loss function |     Cross Entropy Loss With Weights    |
 | Optimization function |    Adam  |
 
-We attempted tuning a variety of hyper parameters to assess how changing these hyper parameters may impact the accuracy of our model. Note, we consider accuracy as two seperate measures here. Specifically, we isolate true-positive and true-negative rates, as considering a blended accuracy rate would favor a scenario where all positives are marked as negatives. Remember, but 0.03% of our data is in the positive class.
+We attempted tuning a variety of hyper parameters to assess how changing these hyper parameters may impact the accuracy of our model. Note, we consider accuracy as two seperate measures here. Specifically, we isolate true-positive and true-negative rates, as considering a blended accuracy rate would favor a scenario where all positives are marked as negatives. Remember, but 0.03% of our initial data is in the positive class.
 
 Our parameter tuning results can be viewed below.
 
