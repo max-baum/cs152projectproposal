@@ -69,7 +69,7 @@ Next, categorical data fields with small sets of possible values (or important g
 | HubzoneIndicator  | Direct Encoding    |
 | RuralUrbanIndicator | Direct Encoding     |
 | BorrowerState    | Direct Encoding   |
-| ProcessingMethod  | Direct Encoding0    |
+| ProcessingMethod  | Direct Encoding    |
 | Franchise Name | Top 10     |
 | OriginatingLender    | Top 10    |
 | NAICSCode  | Top 10    |
