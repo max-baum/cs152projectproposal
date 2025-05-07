@@ -159,40 +159,23 @@ In the real world, if we were to make deployment decisions about the model, the 
 
 ## Discussion
 
--- This needs to be updated further -- 
-
-The results of our best-performing model, using a fully connected neural network with a positive class misclassification weight of 750 and no re-encoding of one-hot features after SMOTE, offer a revealing snapshot of both progress and limitation in PPP fraud detection. The confusion matrix below shows the class imbalance. 
+The results of our best-performing model, using a fully connected neural network with a positive class misclassification weight of 750 and no re-encoding of one-hot features after SMOTE, offer a revealing snapshot of both progress and limitation of our neural-network-based PPP fraud detection. The confusion matrix below shows the classification accuracy.
 
 ![confusion matrix for non re-encoded data](ohenonfixed_750weight.png)
 
-At face value, these results reflect significant imbalance. The model incorrectly flags over 28,000 loans as potentially fraudulent and still misses 14 confirmed frauds. However, this framing is misleading.
+At face value, these results reflect significant error rates. The model incorrectly flags over 28,000 loans as potentially fraudulent and still misses 14 confirmed frauds. However, we argue that this framing is incorrect.
 
-Most of the ~193,000 negative examples in our dataset are not truly verified as clean. They simply haven't been confirmed as fraudulent, which makes traditional evaluation metrics like precision, recall, and accuracy unreliable. Many so-called false positives may, in fact, be unconfirmed fraud cases. We believe the model is best interpreted as a tool to identify potential for fraud.
+Most of the ~193,000 negative examples in our dataset are not truly verified as clean. They simply haven't been confirmed as fraudulent, which makes traditional evaluation metrics like precision, recall, and accuracy unreliable. Many so-called false negatives may, in fact, be unconfirmed fraud cases. Hence, the high false positive rate may not be as grave as may initially seem.
+
+If thought about as a tool to improve workflows, rather than replace them, this model carries further merit.
 
 In this configuration:
 - The model correctly flags 72% of known frauds (36 out of 50).
 - It requires investigation of only ~15% of the total dataset (28,617 out of ~193,700 samples).
 
-This means that regulators could examine just 18,000 flagged loans (rather than 900,000) and still capture the majority of known fraud cases in the case with SMOTE without OHE. That’s a significant reduction in investigative effort with strong payoff. This model is not perfect as it generates many false positives. But in fraud detection, missing fraud is more costly than over-flagging clean loans. Given the severe class imbalance, data noise, and adversarial nature of the problem (i.e., fraudsters trying to appear “normal”), this trade-off is reasonable.
+This means that regulators could examine just 18,000 flagged loans (rather than 900,000) and still capture the majority of known fraud cases in the case with SMOTE without OHE. That’s a significant reduction in investigative effort with strong payoff. Given the high costs of missing fraud, this appears a reasonable tradeoff to make, especially when the alternative is blindly reviewing over 900,000 loans.
 
-Overal, we found that re-encoding one-hot fields after SMOTE hurts performance. Our best model avoided this and preserved interpolated structure. High positive class weights also significantly improve true positive rates. This reflects the real-world priority of identifying fraud, even at the cost of false positives. Additionally, deeper networks beyond 3–6 layers provided minimal benefit and could result in overfitting. Added depth did not consistently improve accuracy, likely due to the saturation of noise in the dataset.
-
------------------ Old Discussion 
-
-The performance of the fully-connected neural network models across two architectural variants reveals several important trends and limitations, especially in the context of imbalanced classification.
-
-Both confusion matrices bellow demonstrate the severe class imbalance in the dataset, with the vast majority of samples being labeled as negative (0). However, this imbalance is likely artificial, given that only a small set of known fraud cases have been labeled as such, while the rest are not verified negatives but rather unlabeled or unknown instances. This labeling strategy introduces noise and potential misrepresentation into model evaluation, especially regarding false negatives.
-
--- Update accuracy numbers once we decide upon which model to use and if we fix OHE after SMOTE --
-
-In the first model (200-200-200 architecture), the model correctly identified 27 of the 50 actual positive cases (true positives), with 23 false negatives. However, it also produced 11,737 false positives out of 193,657 presumed negatives, resulting in a high false positive rate. This may be concerning as it does not minimize unnecessary investigations for real-world applications. Yet, given the potential that many of the negative-labeled cases could actually be fraudulent but unlabeled, false positives in this context might actually capture real fraud instances or characteristics that resemble confirmed positives.
-
-In the second model (214-214-100-50-25 architecture), the false positives decreased significantly to 4,827, but at the cost of true positives dropping to 23 and false negatives increasing to 27. This indicates a more conservative model that is less likely to flag loans as fraudulent, potentially leading to more missed fraud cases. Given the investigative nature of the task, this trade-off may be undesirable in comparison to the first one.
-
-
-Interestingly, increasing model depth and slightly varying neuron counts did not materially improve true positive detection, which stayed around 23–27 out of 50 positives. This suggests that model architecture alone may not solve the issue and further performance gains may require additional techniques. 
-
-A critical point is that traditional performance metrics (e.g., precision, accuracy) are not fully valid here due to the treatment of unknowns as negatives. The confusion matrix gives a partial view, but we cannot trust metrics that rely on true negatives, because many of these may be mislabeled or uncertain. As such, model performance should be viewed through the lens of investigative support rather than predictive certainty. A high false positive count may be acceptable if it leads to uncovering hidden fraudulent cases.
+Finally, when it comes to the best architecture and approach to producing a loan fraud detection model, we notice a few things. Firstly, there is doubtless tradeoff between false positive and false positive accuracy rates when approaching loan fraud detection. No model is going to perfectly classify loans behavior, so it's the designer's choice whether to overclassify or underclassify. Secondly, our work found that re-encoding one-hot fields after SMOTE hurts model performance when using synthetic training data. Our best model avoided this and preserved interpolated structure. Thirdly, a variety of techniques, including SMOTE and weights in cross entropy loss functions can be used to maximize performance of neural networks on highly imbalanced datasets. Lastly, simple architectures worked well for our model. Deeper networks beyond 3–6 layers provided minimal benefit and appeared to result in overfitting. Hopefully, these findings can prove useful in future research on neural network enabled loan fraud detection.
 
   
 ## Reflection and Looking Forward
