@@ -62,25 +62,27 @@ Next, categorical data fields with small sets of possible values (or important g
 
 | Column Name   | Encoding Process |
 | -------- | ------- |
-| NonProfit  | Direct Encoding    |
-| Veteran | Direct Encoding     |
-| BusinessType    | Direct Encoding    |
-| ProjectState  | Direct Encoding  |
-| BusinessAgeDescription | Direct Encoding     |
-| LMIIndicator    | Direct Encoding    |
-| HubzoneIndicator  | Direct Encoding    |
-| RuralUrbanIndicator | Direct Encoding     |
-| BorrowerState    | Direct Encoding   |
-| ProcessingMethod  | Direct Encoding    |
-| Franchise Name | Top 10     |
-| OriginatingLender    | Top 10    |
-| NAICSCode  | Top 10    |
+| NonProfit  | Direct OHE    |
+| Veteran | Direct OHE     |
+| BusinessType    | Direct OHE    |
+| ProjectState  | Direct OHE  |
+| BusinessAgeDescription | Direct OHE     |
+| LMIIndicator    | Direct OHE    |
+| HubzoneIndicator  | Direct OHE    |
+| RuralUrbanIndicator | Direct OHE     |
+| BorrowerState    | Direct OHE   |
+| ProcessingMethod  | Direct OHE    |
+| Franchise Name | Top 10 OHE     |
+| OriginatingLender    | Top 10 OHE    |
+| NAICSCode  | Top 10 OHE   |
 
 After this encoding, the data was further cleaned, and any other fields that were not inherently numwerical was converted to a numerical equivalent. The data was then normalized.
 
 ### Addressing Class Imbalance
 
-With only 248 confirmed cases of fraud, and over 900,000 loans that were not know to be fraud, the dataset used in this project was highly class imbalanced. To address this imbalance, we used a variety of balancing techniques. The first technique was synthetic minority over-sampling technique (SMOTE), a process that generates synthetic data by interpolating between nearest neighbors in the minority class [^9]. SMOTE was only used to balance the training data. We used the SMOTE package from imblearning [^10], creating a synthetic training dataset with an equal number of confirmed cases of fraud and non-confirmed fraud. Importantly, as SMOTE creates synthetic data through interpolation, synthetic data would be created with fields intended to represent one-hot encoding carrying values containing non-integers. To fix this, after running SMOTE, for each row in the dataset, the highest value in each set of one-hot encoded values would be converted to a 1, and all other values in that set converted to a 0.
+With only 248 confirmed cases of fraud, and over 900,000 loans that were not known to be fraud, the dataset used in this project was highly class imbalanced. To address this imbalance, we used a variety of balancing techniques. The first technique was synthetic minority over-sampling technique (SMOTE), a process that generates synthetic data by interpolating between nearest neighbors in the minority class [^9]. SMOTE was only used to balance the training data. We used the SMOTE package from imblearning [^10], creating a synthetic training dataset with an equal number of confirmed cases of fraud and non-confirmed fraud. After running SMOTE, we produced a synthetic training dataset where the formerly minority and majority classes were now balanced 1:1 in number of records.
+
+Importantly, as SMOTE creates synthetic data through interpolation, synthetic data would be created with fields intended to represent one-hot encoding carrying values containing non-integers. To fix this, after running SMOTE, for each row in the dataset, the highest value in each set of one-hot encoded values would be converted to a 1, and all other values in that set converted to a 0. 
 
 The other balancing technique utilized in this project was weighting in cross entropy loss function. We set higher weights for misclassifying the minority class, such that calculated loss would be higher when misclassification of true positives occurred. Thus, the model would be oriented to maximize true-positive classification rate to avoid overlooking positives, ultimately coming at the cost of incorrectly classifying more negatives as positives.
 
